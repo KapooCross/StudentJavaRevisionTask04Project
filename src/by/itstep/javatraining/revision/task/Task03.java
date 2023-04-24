@@ -37,9 +37,9 @@ package by.itstep.javatraining.revision.task;
  *	[output 6]: -1
  */
 
-public class Task03 { //не работает
+public class Task03 {
     public static int task03(int n, int m, int x, int y) {
-        System.out.println("efrgthy");
+//        System.out.println("efrgthy");
 //
         // Проверка на некорректные входные данные
 //        if (n <= 0 || m <= 0 || x < 0 || y < 0 || x > n || y > m) {
@@ -57,17 +57,26 @@ public class Task03 { //не работает
 //                Math.min(distanceToLeft, distanceToRight));
 //
 //        return minDistance;
-
-        if (n <= 0 || m <= 0 || x < 0 || y < 0 || x > n || y > m) {
+        if (n <= 0 || m <= 0 || x < 0 || y < 0) {
             return -1;
         }
-        if (n - x < m - y) {
-            return n - x;
+
+        if (n < m) {
+            int tmp = n;
+            n = m;
+            m = tmp;
         }
-        if ( m - y < n -x) {
-            return m - y;
-        }
-        return 34;
+        return Math.min(Math.min(m - x, x), Math.min(n - y, y));
+//        if (n <= 0 || m <= 0 || x < 0 || y < 0 || x > n || y > m) {
+//            return -1;
+//        }
+//        if (n - x < m - y) {
+//            return n - x;
+//        }
+//        if ( m - y < n -x) {
+//            return m - y;
+//        }
+//        return 34;
     }
 }
 
