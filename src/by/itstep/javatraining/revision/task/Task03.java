@@ -37,7 +37,7 @@ package by.itstep.javatraining.revision.task;
  *	[output 6]: -1
  */
 
-public class Task03 {
+public class Task03 { //не работает
     public static int task03(int n, int m, int x, int y) {
         System.out.println("efrgthy");
 //
